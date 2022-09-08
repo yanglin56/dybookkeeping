@@ -1,7 +1,8 @@
 <template>
-  <div class="nav-wrapper">
-    <div class="content">home.vue</div>
-    <Nav />
+  <div>
+    <Layout>
+      <p>你好，home</p>
+    </Layout>
   </div>
 </template>
 
@@ -12,15 +13,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.nav-wrapper {
-  border: 1px solid green;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-.content {
-  border: 1px solid blue;
-  overflow: auto;
-  flex-grow: 1;
-}
 </style>
