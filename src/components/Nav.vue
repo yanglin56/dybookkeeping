@@ -1,20 +1,18 @@
 <template>
-  <div class="nav">
-    <router-link to="/home">
+  <nav>
+    <router-link to="/home" class="item">
       <Icon name="home" />
-      记账</router-link
-    >
-    ｜
-    <router-link to="/statistics">
+      记账
+    </router-link>
+    <router-link to="/statistics" class="item">
       <Icon name="statistics" />
-      统计</router-link
-    >
-    ｜
-    <router-link to="/profile">
+      统计
+    </router-link>
+    <router-link to="/profile" class="item">
       <Icon name="profile" />
-      我的</router-link
-    >
-  </div>
+      我的
+    </router-link>
+  </nav>
 </template>
 
 <script lang="ts">
@@ -24,7 +22,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.nav {
-  border: 1px solid red;
+nav {
+  display: flex;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+  flex-direction: row;
+  font-size: 12px;
+  > .item {
+    padding: 2px 0;
+    width: 33.33333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .icon {
+      width: 32px;
+      height: 32px;
+    }
+  }
 }
 </style>
