@@ -1,12 +1,12 @@
 <template>
   <div>
-    Home
+    Labels
   </div>
 </template>
 
 <script>
 export default {
-  name: 'FruitBookkeepingHome',
+  name: 'FruitBookkeepingLabels',
 
   data() {
     return {

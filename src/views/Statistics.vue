@@ -1,12 +1,12 @@
 <template>
   <div>
-    Home
+    Statistics
   </div>
 </template>
 
 <script>
 export default {
-  name: 'FruitBookkeepingHome',
+  name: 'FruitBookkeepingStatistics',
 
   data() {
     return {

@@ -1,12 +1,12 @@
 <template>
   <div>
-    Home
+    money
   </div>
 </template>
 
 <script>
 export default {
-  name: 'FruitBookkeepingHome',
+  name: 'FruitBookkeepingMoney',
 
   data() {
     return {
