@@ -1,24 +1,25 @@
 <template>
   <div class="nav">
-    <router-link to="/home">首页</router-link>
+    <router-link to="/home">
+      <Icon name="home" />
+      记账</router-link
+    >
     ｜
-    <router-link to="/labels">标签</router-link>
+    <router-link to="/statistics">
+      <Icon name="statistics" />
+      统计</router-link
+    >
     ｜
-    <router-link to="/profile">我的</router-link>
+    <router-link to="/profile">
+      <Icon name="profile" />
+      我的</router-link
+    >
   </div>
 </template>
 
 <script lang="ts">
 export default {
   name: "Nav",
-
-  data() {
-    return {};
-  },
-
-  mounted() {},
-
-  methods: {},
 };
 </script>
 
