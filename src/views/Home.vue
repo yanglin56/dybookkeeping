@@ -1,29 +1,15 @@
 <template>
   <div>
-    Home
+    111
+    <Nav />
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
-  name: 'FruitBookkeepingHome',
-
-  data() {
-    return {
-      
-    };
-  },
-
-  mounted() {
-    
-  },
-
-  methods: {
-    
-  },
+  name: "FruitBookkeepingHome",
 };
 </script>
 
 <style lang="scss" scoped>
-
 </style>

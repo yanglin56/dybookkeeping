@@ -2,13 +2,6 @@
   <div>
     <router-view/>
     <hr/>
-    <div>
-      <router-link to="/home">首页</router-link>
-      ｜
-      <router-link to="/labels">标签</router-link>
-      ｜
-      <router-link to="/profile">我的</router-link>
-    </div>
   </div>
 </template>
 

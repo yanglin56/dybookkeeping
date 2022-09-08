@@ -1,29 +1,15 @@
 <template>
   <div>
     Labels
+    <Nav />
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
-  name: 'FruitBookkeepingLabels',
-
-  data() {
-    return {
-      
-    };
-  },
-
-  mounted() {
-    
-  },
-
-  methods: {
-    
-  },
+  name: "FruitBookkeepingLabels",
 };
 </script>
 
 <style lang="scss" scoped>
-
 </style>

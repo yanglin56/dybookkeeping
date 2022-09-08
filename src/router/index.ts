@@ -26,7 +26,7 @@ const routes: Array<RouteConfig> = [
     component: Labels,
   },
   {
-    path: 'profile',
+    path: '/profile',
     component: Profile,
   },
   {

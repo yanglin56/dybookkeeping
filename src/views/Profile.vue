@@ -1,29 +1,15 @@
 <template>
   <div>
     profile
+    <Nav />
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
-  name: 'FruitBookkeepingStatistics',
-
-  data() {
-    return {
-      
-    };
-  },
-
-  mounted() {
-    
-  },
-
-  methods: {
-    
-  },
+  name: "FruitBookkeepingStatistics",
 };
 </script>
 
 <style lang="scss" scoped>
-
 </style>
