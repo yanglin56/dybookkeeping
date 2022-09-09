@@ -1,9 +1,8 @@
 <template>
   <div>
-    <Layout>
-      <div>
+    <Layout classPrefix="layout">
+      <div class="title">
         <span>你好，欢迎回来！</span>
-        <span>当天时间</span>
       </div>
       <div class="subtotal">
         <div>收入</div>
@@ -11,32 +10,64 @@
       </div>
       <div class="total">
         <p>列表</p>
-        <Icon name="add" class="add" @click="addClick" />
+        <router-link to="/money" class="add">
+          <Icon name="add" />
+        </router-link>
       </div>
     </Layout>
   </div>
 </template>
 
 <script lang="ts">
-import Money from "./Money.vue";
+import Money from './Money.vue'
 export default {
-  name: "FruitBookkeepingHome",
+  name: 'FruitBookkeepingHome',
   components: { Money },
-  methods: {
-    addClick() {
-      console.log("跳转页面");
-      // this.$router.push("/money");
-    },
-  },
-};
+}
 </script>
 
+<style lang="scss">
+.layout-content {
+  border: 3px solid green;
+  display: flex;
+  flex-direction: column-reverse;
+}
+</style>
 <style lang="scss" scoped>
-.icon.add {
-  width: 4em;
-  height: 4em;
-  vertical-align: 0.15em;
-  fill: currentColor;
-  overflow: hidden;
+@import '~@/assets/style/helper.scss';
+.subtotal {
+  @extend %outerShadow;
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  height: 140px;
+  background: rgb(222, 195, 195);
+  margin: 10px auto;
+  border-radius: 18px;
+  padding: 10px 0;
+}
+.title {
+  text-align: center;
+  padding: 20px;
+}
+.total {
+  width: 100%;
+  height: 60%;
+  background: rgb(222, 195, 195);
+  margin-top: 100px;
+  position: relative;
+  > .add {
+    position: absolute;
+    right: 16px;
+    bottom: 60px;
+    > .icon {
+      width: 3em;
+      height: 3em;
+      vertical-align: 0.15em;
+      fill: currentColor;
+      overflow: hidden;
+      color: green;
+    }
+  }
 }
 </style>
