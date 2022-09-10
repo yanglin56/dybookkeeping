@@ -1,21 +1,19 @@
 <template>
-  <div>
-    <Layout classPrefix="layout">
-      <div class="title">
-        <span>你好，欢迎回来！</span>
-      </div>
-      <div class="subtotal">
-        <div>收入</div>
-        <div>支出</div>
-      </div>
-      <div class="total">
-        <p>列表</p>
-        <router-link to="/money" class="add">
-          <Icon name="add" />
-        </router-link>
-      </div>
-    </Layout>
-  </div>
+  <Layout classPrefix="layout">
+    <div class="total">
+      <p>列表</p>
+      <router-link to="/money" class="add">
+        <Icon name="add" />
+      </router-link>
+    </div>
+    <div class="subtotal">
+      <div>收入</div>
+      <div>支出</div>
+    </div>
+    <div class="title">
+      <span>你好，欢迎回来！</span>
+    </div>
+  </Layout>
 </template>
 
 <script lang="ts">
@@ -28,7 +26,6 @@ export default {
 
 <style lang="scss">
 .layout-content {
-  border: 3px solid green;
   display: flex;
   flex-direction: column-reverse;
 }
@@ -41,7 +38,7 @@ export default {
   justify-content: space-around;
   width: 90%;
   height: 140px;
-  background: rgb(222, 195, 195);
+  background: rgb(225, 85, 134);
   margin: 10px auto;
   border-radius: 18px;
   padding: 10px 0;
