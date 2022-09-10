@@ -17,11 +17,11 @@
 </template>
 
 <script lang="ts">
-import Money from './Money.vue'
+import Money from './Money.vue';
 export default {
   name: 'FruitBookkeepingHome',
   components: { Money },
-}
+};
 </script>
 
 <style lang="scss">
@@ -38,7 +38,7 @@ export default {
   justify-content: space-around;
   width: 90%;
   height: 140px;
-  background: rgb(225, 85, 134);
+  background: $color-highlight;
   margin: 10px auto;
   border-radius: 18px;
   padding: 10px 0;
@@ -50,7 +50,7 @@ export default {
 .total {
   width: 100%;
   height: 60%;
-  background: rgb(222, 195, 195);
+  border: 1px solid red;
   margin-top: 100px;
   position: relative;
   > .add {
