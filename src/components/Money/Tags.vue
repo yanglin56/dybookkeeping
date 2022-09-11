@@ -19,12 +19,10 @@
 <script lang="ts">
 import Vue from 'vue';
 import { Component, Prop } from 'vue-property-decorator';
-
 @Component
 export default class Tags extends Vue {
   @Prop() readonly dataSource: string[] | undefined;
   selectedTags: string[] = [];
-
   toggle(tag: string) {
     const index = this.selectedTags.indexOf(tag);
     if (index >= 0) {
@@ -48,26 +46,23 @@ export default class Tags extends Vue {
 <style lang="scss" scoped>
 .tags {
   font-size: 14px;
+  padding: 16px;
   flex-grow: 1;
   display: flex;
   flex-direction: column-reverse;
-  height: 366px;
   > .current {
     display: flex;
-    height: 318px;
     flex-wrap: wrap;
-    overflow: auto;
-    justify-content: center;
     > li {
       $bg: #d9d9d9;
       background: $bg;
       $h: 24px;
       height: $h;
       line-height: $h;
-      border-radius: calc($h / 2);
+      border-radius: $h/2;
       padding: 0 16px;
       margin-right: 12px;
-      margin-top: 8px;
+      margin-top: 4px;
       &.selected {
         background: darken($bg, 50%);
         color: white;
@@ -80,8 +75,8 @@ export default class Tags extends Vue {
       background: transparent;
       border: none;
       color: #999;
-      border: 1px solid;
-      padding: 4px 8px;
+      border-bottom: 1px solid;
+      padding: 0 4px;
     }
   }
 }

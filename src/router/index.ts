@@ -6,6 +6,7 @@ import Labels from '@/views/Labels.vue';
 import Profile from '@/views/Profile.vue';
 import Statistics from '@/views/Statistics.vue';
 import NotFound from '@/views/NotFound.vue';
+import EditLabels from '@/views/EditLabels.vue';
 
 Vue.use(VueRouter);
 
@@ -25,6 +26,10 @@ const routes = [
   {
     path: '/labels',
     component: Labels,
+  },
+  {
+    path: '/labels/edit',
+    component: EditLabels,
   },
   {
     path: '/profile',
