@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div>日前</div>
     <label class="notes">
       <span class="name">备注</span>
       <input type="text" v-model="value" placeholder="请在这里输入备注" />

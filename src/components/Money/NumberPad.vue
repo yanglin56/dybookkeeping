@@ -1,8 +1,7 @@
 <template>
   <div class="numberPad">
     <div class="output">
-      <span class="date">当前日期</span>
-      <span class="sum">{{ output }}</span>
+      <span>{{ output }}</span>
     </div>
     <div class="buttons">
       <button @click="inputContent">1</button>
@@ -80,16 +79,11 @@ export default class NumberPad extends Vue {
   .output {
     @extend %clearFix;
     @extend %innerShadow;
+    font-size: 36px;
     font-family: Consolas, monospace;
-    padding: 14px 16px;
+    padding: 9px 16px;
     text-align: right;
-    > .sum {
-      font-size: 36px;
-    }
-    > .date {
-      float: left;
-      margin-top: 40px;
-    }
+    height: 72px;
   }
   .buttons {
     @extend %clearFix;
