@@ -5,6 +5,7 @@
       <router-link to="/money" class="add">
         <Icon name="add" />
       </router-link>
+      <router-link to="/labels"> 标签 </router-link>
     </div>
     <div class="subtotal">
       <div>收入</div>
