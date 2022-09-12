@@ -10,15 +10,15 @@
 <script lang="ts">
 export default {
   props: ['classPrefix'],
-  name: 'DybookkeepingLayout',
-}
+  name: 'Layout',
+};
 </script>
 
 <style lang="scss" scoped>
 .layout-wrapper {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 .content {
   overflow: auto;
