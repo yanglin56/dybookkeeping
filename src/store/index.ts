@@ -55,7 +55,7 @@ const store = new Vuex.Store({
     },
     createRecord(state, record: RecordItem) {
       const record2 = clone(record);
-      record2.createdAt = new Date().toISOString();
+      record2.createdAt = record2.createdAt || new Date().toISOString();
       state.recordList.push(record2);
       store.commit('saveRecords');
     },
@@ -70,10 +70,10 @@ const store = new Vuex.Store({
         window.localStorage.getItem('tagList') || '[]'
       );
       if (!state.tagList || state.tagList.length === 0) {
-        store.commit('createTag', '衣');
-        store.commit('createTag', '食');
-        store.commit('createTag', '住');
-        store.commit('createTag', '行');
+        store.commit('createTag', '服饰');
+        store.commit('createTag', '餐饮');
+        store.commit('createTag', '住宿');
+        store.commit('createTag', '出行');
       }
     },
     createTag(state, name: string) {
