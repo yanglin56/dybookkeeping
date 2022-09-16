@@ -31,7 +31,6 @@ import recordTypeList from '@/constants/recordTypeList';
 import dayjs from 'dayjs';
 import clone from '@/lib/clone';
 import Chart from '@/components/Chart.vue';
-
 @Component({
   components: { Tabs, Chart },
 })
@@ -90,12 +89,7 @@ export default class Statistics extends Vue {
           '28',
           '29',
           '30',
-          '31',
         ],
-      },
-      tooltip: {
-        show: true,
-        triggerOn: 'click',
       },
       yAxis: {
         type: 'value',
@@ -103,13 +97,14 @@ export default class Statistics extends Vue {
       series: [
         {
           data: [
-            150, 230, 224, 218, 135, 147, 260, 150, 230, 224, 218, 135, 147,
-            260, 150, 230, 224, 218, 135, 147, 260, 150, 230, 224, 218, 135,
-            147, 260,
+            820, 932, 901, 934, 1290, 1330, 1320, 820, 932, 901, 934, 1290,
+            1330, 1320, 820, 932, 901, 934, 1290, 1330, 1320, 820, 932, 901,
+            934, 1290, 1330, 1320, 1, 2,
           ],
           type: 'line',
         },
       ],
+      tooltip: { show: true },
     };
   }
   get recordList() {
@@ -146,6 +141,8 @@ export default class Statistics extends Vue {
     }
     result.map((group) => {
       group.total = group.items.reduce((sum, item) => {
+        console.log(sum);
+        console.log(item);
         return sum + item.amount;
       }, 0);
     });

@@ -1,11 +1,10 @@
 <template>
-  <div class="wrapper" ref="wrapper">chart</div>
+  <div class="wrapper" ref="wrapper"></div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import * as echarts from 'echarts';
-
+import echarts, { EChartOption } from 'echarts';
 @Component
 export default class Chart extends Vue {
   @Prop() options?: EChartOption;
@@ -18,7 +17,8 @@ export default class Chart extends Vue {
   }
 }
 </script>
-<style lang="scss" scoped>
+
+<style scoped lang="scss">
 .wrapper {
   height: 400px;
 }
