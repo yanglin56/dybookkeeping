@@ -41,7 +41,9 @@ export default class Statistics extends Vue {
     return tags.length === 0 ? '无' : tags.map((t) => t.name).join('，');
   }
   mounted() {
-    (this.$refs.chartWrapper as HTMLDivElement).scrollLeft = 9999;
+    const div = this.$refs.chartWrapper as HTMLDivElement;
+    console.log(div.scrollWidth);
+    div.scrollLeft = div.scrollWidth;
   }
   beautify(string: string) {
     const day = dayjs(string);
@@ -98,6 +100,7 @@ export default class Statistics extends Vue {
           '28',
           '29',
           '30',
+          '31',
         ],
         axisTick: { alignWithLabel: true },
         axisLine: { lineStyle: { color: '#666' } },
