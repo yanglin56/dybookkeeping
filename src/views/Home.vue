@@ -1,70 +1,70 @@
-<template>
+<template >
   <Layout classPrefix="layout">
+    <div class="title">你好，欢迎回来！</div>
+    <AccountInfo />
     <div class="total">
-      <p>列表</p>
+      明细
       <router-link to="/money" class="add">
         <Icon name="add" />
       </router-link>
-      <router-link to="/labels"> 标签 </router-link>
-    </div>
-    <div class="subtotal">
-      <div>收入</div>
-      <div>支出</div>
-    </div>
-    <div class="title">
-      <span>你好，欢迎回来！</span>
     </div>
   </Layout>
 </template>
 
 <script lang="ts">
 import Money from './Money.vue';
+import AccountInfo from '../components/AccountInfo.vue';
 export default {
   name: 'FruitBookkeepingHome',
-  components: { Money },
+  components: { Money, AccountInfo },
 };
 </script>
 
-<style lang="scss">
-.layout-content {
-  display: flex;
-  flex-direction: column-reverse;
-}
-</style>
 <style lang="scss" scoped>
 @import '~@/assets/style/helper.scss';
+.layout-content {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  position: relative;
+  > .title {
+    text-align: center;
+    padding-top: 20px;
+  }
+}
 .subtotal {
   @extend %outerShadow;
+  position: absolute;
   display: flex;
   justify-content: space-around;
   width: 90%;
   height: 140px;
   background: $color-highlight;
-  margin: 10px auto;
+  margin: 20px;
   border-radius: 18px;
-  padding: 10px 0;
+  padding-top: 40px;
+  div {
+    // margin-top: 40px;
+  }
 }
-.title {
-  text-align: center;
-  padding: 20px;
-}
+
 .total {
   width: 100%;
   height: 60%;
-  border: 1px solid red;
-  margin-top: 100px;
+  border: 2px solid red;
   position: relative;
+  top: 200px;
   > .add {
     position: absolute;
     right: 16px;
-    bottom: 60px;
+    top: 450px;
     > .icon {
       width: 3em;
       height: 3em;
       vertical-align: 0.15em;
       fill: currentColor;
       overflow: hidden;
-      color: green;
+      color: rgb(88, 191, 77);
     }
   }
 }

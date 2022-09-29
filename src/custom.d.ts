@@ -15,6 +15,7 @@ type RecordItem = {
 };
 
 type Tag = {
+  [x: string]: any;
   id: string;
   name: string;
 };

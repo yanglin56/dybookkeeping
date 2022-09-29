@@ -86,15 +86,11 @@ export default class Statistics extends Vue {
         return -1;
       }
     });
-    console.log('array');
-    console.log(array);
     return array;
   }
   get chartOptions() {
     const keys = this.keyValueList.map((item) => item.key);
     const values = this.keyValueList.map((item) => item.value);
-    console.log('values');
-    console.log(values);
     return {
       grid: {
         left: 0,
@@ -132,6 +128,52 @@ export default class Statistics extends Vue {
         formatter: '{c}',
       },
     };
+    // return {
+    //   title: {
+    //     text: '',
+    //     subtext: '支出',
+    //     left: 'center',
+    //     top: '39%',
+    //     textStyle: {
+    //       fontSize: 38,
+    //       color: '#454c5c',
+    //       align: 'center',
+    //     },
+    //     subtextStyle: {
+    //       fontFamily: '微软雅黑',
+    //       fontSize: 16,
+    //       color: '#6c7a89',
+    //     },
+    //   },
+    //   tooltip: {
+    //     trigger: 'item',
+    //   },
+    //   legend: {
+    //     orient: 'vertical',
+    //     left: 'left',
+    //   },
+    //   series: [
+    //     {
+    //       name: 'Access From',
+    //       type: 'pie',
+    //       radius: '50%',
+    //       data: [
+    //         { value: 1048, name: 'Search Engine' },
+    //         { value: 735, name: 'Direct' },
+    //         { value: 580, name: 'Email' },
+    //         { value: 484, name: 'Union Ads' },
+    //         { value: 300, name: 'Video Ads' },
+    //       ],
+    //       emphasis: {
+    //         itemStyle: {
+    //           shadowBlur: 10,
+    //           shadowOffsetX: 0,
+    //           shadowColor: 'rgba(0, 0, 0, 0.5)',
+    //         },
+    //       },
+    //     },
+    //   ],
+    // };
   }
   get recordList() {
     return (this.$store.state as RootState).recordList;
